@@ -1,1 +1,1 @@
-# Hafta 01
+# 1.Hafta
