@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>ServletWeek01</display-name>
+<servlet>
+	<servlet-name>MyFirstServletName</servlet-name>
+	<servlet-class>_01_helloservlet.MyFirstServlet</servlet-class>
+	<!-- DİKKAT Servlet class kısmını doğru yazalım packageName.className şeklinde olacak
+	sonunda .java olmayacak
+	ctrl ye bastığımızda ilgili sınıfa gidebiliyor olmamız gerekiyor.
+	 -->
+</servlet>
+
+<servlet-mapping>
+    <!--Üstteki servlet tanımıyla alttaki aynı olmalı. Daha doğrusu hangi servlet e 
+    karşılık mapping yapacaksal ilgili servlet name i doğru şekilde verelim  -->
+	<servlet-name>MyFirstServletName</servlet-name>
+	<url-pattern>/myfirstservleturl</url-pattern>
+	<!-- URL pattern inde / olması gerekiyor en başında! -->
+</servlet-mapping>
+</web-app>
