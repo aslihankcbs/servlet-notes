@@ -21,7 +21,7 @@ Resource -> html, pdf, png, js vs...
 Son kullanıcı veya bir browser olabilir.
 Browser'lar html sayfalarını yorumlar ve son kullanıcının anlayacağı şekilde render eder.
 
-**HTTP (Hyper Text Transfer Protocol) **
+**HTTP (Hyper Text Transfer Protocol)**
 
 Browser ile server arasındaki iletişim HTTP ile gerçekleştirilmektedir. (İletişim -> Kaynağın(resource) istenmesi, cevap(response) dönülmesi vb.)
 
