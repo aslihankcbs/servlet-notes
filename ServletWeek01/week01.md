@@ -50,7 +50,37 @@ Tomcat: Bir server olarak çalışmakta ve uygulamamızı publish etmektedir.
   Web Browser -> Web Server -> Web Container -> Servlet Container
   
 **Servlet Konteyner neler sağlar?**
-* Communication Support:
+1) İletişim Desteği:
   * Servlet ile server arasındaki iletişimi sağlar. Bu sayede port dinle, stream oluştur, http protokolüne göre kodu yaz, socket aç vs. işlemlerine gerek duyulmaz.
+2) Yaşam Döngüsü Yönetimi:
+  * Servlet'lerin bütün yaşam döngüsü konteynerin sorumluluğundadır. Initialize edilmesi, objenin oluşturulması vs.
+3) Multithread Desteği:
+  * Her istek geldiğinde bir tane thread oluşturulur.
+4) JSP Desteği:
+  * Konteynerlar JSP dosyalarını translate eder.
+  
+Yani Tomcat'te yer alan Servlet Engine bunları sağlamaktadır.  
 
+**Konfigürasyon**
 
+Java'da Servlet, JSF, JPA, Spring gibi yapıların konfigürasonları genel olarak 2 farklı yaklaşımla yapılmaktadır.
+* XML Yaklaşımı
+* Annotation Yaklaşımı
+
+Annotation yaklaşımı biraz daha pratik bir yaklaşım olmakla beraber birbirlerine göre üstünlükleri vardır. 
+
+  **XML Konfigürasyonu** 
+  * web.xml -> Deployment Descriptor
+  * Adı web.xml olmak zorundadır.
+  * WEB-INF'te bulunmalıdır.
+  * Her request sonrasında thread oluşuyor. Thread yönetimi konteyner altında!
+  
+  **Annotation ile Konfigürasyon**
+  * İlgili sınıf üzerinde:
+    ```java
+    @WebServlet("/annotationServlet") 
+    ```
+    çoklu URL vermek için ise
+     ```java
+    @WebServlet(urlPatterns = {"/annotationServlet", "annotationServlet2"}) 
+    ```
