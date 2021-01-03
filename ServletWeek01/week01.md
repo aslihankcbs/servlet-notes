@@ -61,6 +61,10 @@ Tomcat: Bir server olarak çalışmakta ve uygulamamızı publish etmektedir.
   
 Yani Tomcat'te yer alan Servlet Engine bunları sağlamaktadır.  
 
+**Glassfish & Apache Tomcat Farkları Nelerdir?**
+* Glassfish bir application server'dır. Ekstra özellik barındırır. Tomcat'ten daha fazla modüle destek verir. İçerisinde daha fazla Enterprise Edition modülüne destek barındırır. 
+* Apache Tomcat sadece Servlet Container özelliği gösterir. EJB beanlerine, CDI beanlerine destek sağlamaz. Spring MVC çalıştırabilir.
+
 **Konfigürasyon**
 
 Java'da Servlet, JSF, JPA, Spring gibi yapıların konfigürasonları genel olarak 2 farklı yaklaşımla yapılmaktadır.
